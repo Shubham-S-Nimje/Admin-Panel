@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ContextProvider from './Components/Context/ContextProvider';
+import Form from './Components/FormData/Form';
+import Cart from './Components/Cart/Cart';
+import Display from './Components/DisplayData/Display';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <ContextProvider>
+    <div className="App row py-5">
+      <div className='col'>
+      <Form/>
+      </div>
+      <div className='col'>
+      <Cart/>
+      </div>
+      <Display/>
     </div>
+    </ContextProvider>
   );
 }
 
